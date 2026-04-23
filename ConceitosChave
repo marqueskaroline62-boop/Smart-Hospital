@@ -1,0 +1,5 @@
+A linguagem de alto nível é aquela que está mais próxima da compreensão humana, em exemplo um botão na tela escrito em verde "começar", já a de baixo nível é aquela que o computador entende, por
+exemplo naquele botão verde "começar" tem vários 1 e 0 que não vemos mas ele está lá e é necessário pra maquina rodar. A linguagem compilada é traduzida antes de rodar, já a interpretada é
+traduzida linha por linha, por exemplo é que Python traduz linha por linha, já o java é traduzido tudo antes de rodar. Analogia: é como montar um móvel, você pode ler todo o manual antes e montar dps,
+ou ler linha por linha e ir montando. Isso importa pois é necessário pra saber como 
+e quando o programa vai rodar.

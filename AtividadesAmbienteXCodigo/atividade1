@@ -1,0 +1,18 @@
+Enunciado 
+Um aluno diz: “Eu fiz o Hello World, mas agora nada roda.”
+Ele envia a seguinte informação:
+
+O comando java -version funciona.
+O comando javac -version dá erro no terminal.
+No VS Code, aparece que Java está instalado, mas ele não consegue compilar.
+Pergunta: qual é a hipótese mais provável e qual é a primeira ação que você tomaria para resolver?
+Critério de qualidade: sua resposta precisa separar ambiente de código e citar uma evidência objetiva.
+Evidência mínima esperada: mencionar explicitamente a diferença entre java e javac e o que isso significa.
+
+Entrega (campos explícitos)
+Hipótese (1 frase): ________
+Evidência (1 frase): ________
+Ação 1 (1 frase): ________
+Resultado esperado (1 frase): ________
+
+R: A hipótese é de que o problema é o ambiente e não o código, é evidente que se java -version funciona e o javac -version dá erro, significa que o compilador não está funcionando, logo o PATH JDK não deve estar na pasta bin, porque o comando está correto mas javac pode não estar numa pasta correta junto ao JDK. Sugiro a ação que reinstale de forma correta ou que mude a localização pra pasta correta de execução de aplicativo. Desta forma o resultado esperado se instalado corretamente ou na pasta correta, o comando javac irá rodar e gerar um arquivo .class

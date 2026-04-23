@@ -1,0 +1,41 @@
+// Meu checklist de repetição:
+
+// “quando parar” (condição de parada)
+// “o que muda a cada repetição” (contador, acumulador, leitura)
+// “o que deve ser verdade para continuar” (condição do laço)
+
+// Para acompanhar bem esta unidade, você precisa ter domínio básico de:
+// Estrutura sequencial com ipo (entrada → processamento → saída).
+// Tipos de dados e variáveis em Java (int, double, String).
+// Operadores aritméticos e relacionais (ex.: +, -, *, /, >, <, ==).
+// Leitura de dados com Scanner e impressão no console com System.out.println.
+
+//Eu sei explicar o que é uma condição de parada em um laço?
+//Resposta: Condição de parada é a regra que define quando a repetição 
+// termina. Sem isso, o programa pode entrar em loop infinito ou parar cedo demais.
+
+// Eu sei a diferença entre contador e acumulador?
+// Resposta: Contador normalmente incrementa de 1 em 1 para controlar 
+// quantas repetições ocorreram. Acumulador soma ou agrega valores ao 
+// longo das repetições (ex.: total de vendas, soma de notas).
+
+// Eu consigo prever como uma variável muda a cada repetição?
+// Resposta: Em repetição, sempre existe algo que muda por ciclo 
+// (contador, leitura, soma). Se nada muda, a condição não muda e o laço
+//  pode nunca terminar.
+
+// Três laços básicos e quando cada um faz mais sentido
+
+// 1) for (quando você sabe quantas vezes vai repetir)
+// Você usa for quando existe um contador claro, por exemplo “para cada amostra de 1 até N”.
+// Exemplo mental: “Repita 10 vezes”.
+
+
+// 2) while (quando você repete enquanto algo for verdadeiro)
+// Você usa while quando a repetição depende de uma condição que pode durar um tempo desconhecido.
+// Exemplo mental: “Repita enquanto a entrada for inválida”.
+
+
+// 3) do-while (quando você precisa executar pelo menos uma vez)
+// Você usa do-while quando você precisa fazer a ação e só depois verificar.
+// Exemplo mental: “Peça a senha pelo menos uma vez, e repita se estiver errada”.

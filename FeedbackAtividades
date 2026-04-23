@@ -1,0 +1,27 @@
+-Entrada (I): quantidade de amostras (int amostras), tempo total em minutos (double tempoTotalMin), número de resultados válidos (int validos).
+
+-Processamento (P): calcular tempo médio por amostra (tempoTotalMin / amostras), calcular percentual de válidos ((validos / (double) amostras) * 100).
+
+-Saída (O): imprimir tempo médio e percentual de válidos com rótulos claros e duas casas decimais.
+
+-Teste 1 (entrada → saída esperada): amostras = 10, tempo = 50, válidos = 5 → tempo médio = 5.00, percentual = 50.00.
+
+-Teste 2 (entrada → saída esperada): amostras = 120, tempo = 360, válidos = 114 → tempo médio = 3.00, percentual = 95.00.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Critério	                    Minha escolha	Justificativa correta (modelo)
+Facilidade de depurar	              B	        A variável razao permite inspecionar um passo intermediário e localizar erros mais rápido.
+Clareza para outra pessoa ler	      B	        O cálculo fica “explicado” por etapas, com significado mais óbvio do que uma expressão longa.
+Risco de erro silencioso              B  	    A conversão para double e a etapa intermediária reduzem chance de truncamento passar despercebido.
+Facilidade de testar com evidência	  B	        Você consegue validar primeiro a razão (0 a 1) e depois o percentual (0 a 100), aumentando confiança.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Ipo é uma forma de organizar um programa em três partes: entrada, processamento e saída.
+Entrada é o que o usuário informa, como amostras, tempo total e válidos no laboratório.
+Processamento é o que o programa calcula, como tempo médio e percentual de válidos.
+Saída é o que o programa mostra para provar o resultado, como “tempo médio: 3.00” e “percentual: 95.00”.
+Double é necessário quando o resultado pode ter casas decimais, como médias e percentuais.
+Se eu usar int na divisão, eu posso ter truncamento e o percentual virar 0 mesmo com dados válidos.
+Evidência em um programa sequencial é confirmar com testes e resultados esperados, não apenas rodar sem erro.
+Por exemplo, com amostras 10, tempo 50 e válidos 5, eu espero 5.00 e 50.00.
+Se o console mostrar isso, eu tenho uma prova simples de que a sequência está correta.
+Se não mostrar, eu reviso tipos, divisão e a ordem dos cálculos.

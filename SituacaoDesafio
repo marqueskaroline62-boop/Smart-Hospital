@@ -1,0 +1,8 @@
+A Assinatura: Como o IMC resulta num valor decimal (ex: 22.4), qual será o tipo de retorno que o método deve “prometer” entregar ao sistema?
+resposta: O IMC é um número decimal (ex: 22.4), então o método deve retornar um tipo que suporte casas decimais.
+
+O Isolamento: Como o método receberá o peso e a altura de cada paciente de forma independente, sem confundir os dados?
+resposta: O método precisa receber os dados de cada paciente separadamente, sem depender de variáveis externas.
+
+A Proteção: Como garantimos que os cálculos feitos dentro deste método não “vazem” e não alterem outras partes do programa (Escopo)?
+resposta: Tudo que acontece dentro do método deve ficar dentro dele.

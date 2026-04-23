@@ -1,0 +1,12 @@
+Contador, acumulador e sentinela (três padrões de repetição)  
+
+Contador: controla quantas repetições aconteceram (i++).
+
+Acumulador: soma ou agrega valores (soma += valor).
+
+Sentinela: um valor especial que encerra (por exemplo, digitar -1 para parar).
+
+Padrão	    Para que serve	      Exemplo
+Contador	Repetir N vezes	      Ler 5 notas
+Acumulador	Somar/totalizar	      Somar tempos do laboratório
+Sentinela	Parar por sinal	      Digitar -1 para encerrar

@@ -1,0 +1,138 @@
+O que um operador relacional "maior que" (ex: >) sempre retorna?
+R: Um valor lógico: true ou false.
+
+De acordo com o que vimos em tipos primitivos, quais são os únicos dois valores possíveis de um dado Lógico (boolean)?
+R: True (Verdadeiro) e False (Falso).
+
+Qual é o resultado lógico da expressão matemática 10 > 5?
+R: True (Verdadeiro), pois dez é maior que cinco.
+
+Na lógica do dia a dia, para a frase "Só vou à praia SE fizer sol", o que acontece se o resultado de "fizer sol" for Falso?
+R: A ação (ir à praia) não será realizada.
+--------------------------------------------------------------------------------------------------------------------------
+A Essência das Comparações (Operadores Relacionais)
+Os operadores relacionais são os blocos básicos. Eles funcionam exclusivamente com dois operandos (elementos), comparando a magnitude ou a igualdade entre eles. 
+É importante notar que, em Java, o símbolo de igualdade é dobrado (==), pois um sinal simples (=) é reservado para atribuir valores a variáveis.
+
+Operador	Significado	       Exemplo (Java)	Tradução Lógica
+==	        Igual a	           idade == 18	    A idade é exatamente 18?
+!=	        Diferente de	   preco != 0	    O preço é diferente de zero?
+>	        Maior que	       temp > 37.5	    A temperatura é maior que 37.5?
+<	        Menor que	       estoque < 10	    O estoque é menor que 10?
+>=	        Maior ou igual	   nota >= 7.0	    A nota é 7.0 ou superior?
+<=	        Menor ou igual	    vagas <= 5	    As vagas são 5 ou menos?
+---------------------------------------------------------------------------------------------------------------------------
+A Lógica de Decisão Complexa (Operadores Lógicos)
+Na programação real, as decisões dependem de múltiplos fatores. Os operadores lógicos funcionam como conectores que permitem agrupar várias comparações relacionais em uma única regra de negócio.
+
+Operador	Nome	     Exemplo (Java)	        Comportamento Lógico
+&&      	E (AND)	     (x > 0) && (x < 10)	Exigência: Só resulta em true se todas as partes forem verdadeiras.
+||   	    OU (OR)    	(x > 0) || (x < 10)	    Alternativa: se qualquer uma das condições for verdade, o resultado final será verdadeiro.
+!       	NÃO (NOT)	!(idade < 18)	        Inversão: Inverte o estado booleano (o que é false vira true e vice-versa).
+
+Operador && (E): É o operador da exigência. Ele só permite um resultado positivo se todas as condições forem satisfeitas simultaneamente. 
+Imagine um sistema de login: você precisa do usuário correto E da senha correta.
+
+Operador || (OU): É o operador da alternativa. Ele é mais flexível: se qualquer uma das condições for verdade, o resultado final será verdadeiro. 
+No hospital, um alerta pode soar se a pressão estiver alta OU se o batimento cardíaco estiver instável.
+
+Operador ! (NÃO): Este é o operador de inversão. Ele nega o estado atual. Se um sistema diz que o usuarioAtivo é false, o !usuarioAtivo será true.
+ É útil para verificar o que "não" deve acontecer.
+ ----------------------------------------------------------------------------------------------------------------------------------
+ TABELA VERDADE 
+ A Tabela Verdade é a representação matemática de todas as possibilidades de uma expressão lógica. 
+ No Java, entender essas combinações é vital para evitar erros de lógica em condições complexas.
+
+Operador && (AND / E)
+
+O resultado só será true se ambas as entradas forem verdadeiras. É uma estrutura de "filtro rígido".
+
+Condição A	Condição B	Resultado (A && B)
+false	    false	    false
+false	    true	    false
+true	    false	    false
+true	    true	    true
+
+Operador || (OR / OU)
+
+O resultado será true se pelo menos uma das entradas for verdadeira. É uma estrutura de "alternativa".
+
+Condição A	Condição B	Resultado (A || B)
+false	    false	    false
+false	    true	    true
+true	    false	    true
+true	    true	    true
+
+Operador ! (NOT / NÃO)
+
+Diferente dos anteriores, este operador é unário (atua sobre apenas uma condição), invertendo seu estado original.
+
+Condição A	Resultado (!A)
+true	    false
+false    	true
+
+----------------------------------------------------------------------------------------------------------------------
+Tradução e Aplicação em Java (Sintaxe)
+Agora que dominamos a lógica das tabelas, precisamos aplicá-la seguindo as regras de escrita do Java. 
+O grande segredo aqui é entender que cada comparação que fazemos é, na verdade, uma pergunta que o compilador responderá com um valor lógico.
+
+Situação de Negócio	Implementação em Java (Sintaxe)
+Verificar se o paciente é maior de idade.	        idade >= 18
+Checar se o valor da consulta é diferente de zero.	valorConsulta != 0
+Validar se o paciente tem febre E baixa oxigenação.	temperatura > 37.5 && saturacao < 95
+Identificar se o paciente é idoso OU gestante.	    idade >= 60
+-----------------------------------------------------------------------------------------------------------------------
+Ordem de Avaliação e Precedência
+Na programação, assim como na matemática, existe uma ordem de prioridade. Se você misturar vários operadores em uma única linha, 
+o Java não lerá simplesmente da esquerda para a direita; ele seguirá uma hierarquia.
+Quando o Java encontra uma expressão complexa, ele resolve os operadores nesta ordem:
+
+Parênteses (): Sempre resolvidos primeiro. Use-os para forçar uma lógica ou clarear o código.
+
+Operador de Negação !: O "NÃO" tem prioridade sobre os outros lógicos.
+
+Relacionais (>, <, ==, etc.): As comparações matemáticas vêm em seguida.
+
+Conectivo &&: O "E" é processado antes do "OU".
+
+Conectivo ||: O "OU" é o último na fila de prioridade.
+
+Operação	Ordem de Precedência	      Símbolos
+1º	        Parênteses	                  ( )
+2º	        Incremento / Negação	      ++, --, !
+3º	        Multiplicativos / Aditivos	  *, /, +, -
+4º	        Relacionais	                  >, <, >=, <=
+5º	        Igualdade	                  ==, !=
+6º	        Lógico AND	                  &&
+7º	        Lógico OR	                  || 
+--------------------------------------------------------------------------------------------
+Padrão de Restrição (Operador &&): Se na sua experiência você precisou de dois requisitos simultâneos 
+(ex: Saldo positivo E Senha correta), você usou o operador de exigência. Se um deles falhar, o sistema bloqueia.
+
+Padrão de Alternativa (Operador ||): Se o sistema te deu opções 
+(ex: Pagar com PIX OU Cartão), você usou o operador de flexibilidade. Basta um caminho ser verdadeiro para o processo continuar.
+
+Padrão de Exceção (Operador !): Se a regra era baseada em algo que “não podia acontecer” 
+(ex: Se o usuário NÃO estiver bloqueado), você aplicou a inversão lógica.
+-------------------------------------------------------------------------------------------
+Saber os operadores não basta; é preciso saber usá-los de forma limpa. No dia a dia, pequenos erros de sintaxe ou de lógica podem causar 
+comportamentos imprevisíveis (bugs) difíceis de rastrear.
+
+Cuidado com a Atribuição vs. Comparação
+O erro mais clássico de quem começa em Java é usar = quando deveria usar ==.
+
+Errado: if (idade = 18) (Isso tenta atribuir 18 à variável idade).
+
+Certo: if (idade == 18) (Isso pergunta se a idade é igual a 18).
+------------------------------------------------------------------------------------------------------------------------------------------
+Clareza com Parênteses
+Mesmo que você domine a precedência, o seu código será lido por outros humanos. Use parênteses para tornar a intenção óbvia.
+Confuso: if (A || B && C)
+Limpo: if (A || (B && C))
+
+Evite a Redundância Booleana
+Não é necessário comparar um boolean com true.
+
+Redundante: if (estaLogado == true)
+
+Profissional: if (estaLogado)

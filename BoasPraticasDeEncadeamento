@@ -1,0 +1,13 @@
+Boas Práticas de Encadeamento
+Evite o “Código Espaguete”: Se você precisar de mais do que 5 ou 6 else if seguidos, talvez a lógica esteja ficando complexa demais. 
+Nesses casos, desenvolvedores costumam avaliar se o switch-case (nosso próximo tópico) ou o uso de Polimorfismo não seriam mais adequados.
+
+O Princípio da Falha Rápida (Fail Fast): Sempre coloque as condições que representam erros ou casos críticos no topo. 
+Isso garante que o sistema reaja imediatamente ao perigo antes de processar lógicas de “normalidade”.
+
+Clareza Visual: Mantenha a identação (recuo do texto) rigorosa. Em Java, o alinhamento ajuda o olho humano a identificar onde começa e termina a escada de decisões.
+
+Limites de Legibilidade:
+
+Muitos else if aninhados (um dentro do outro) dificultam o rastreamento de bugs.
+A recomendação é manter a estrutura o mais “plana” possível para que qualquer pessoa consiga prever o caminho do dado apenas batendo o olho.

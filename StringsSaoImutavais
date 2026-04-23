@@ -1,0 +1,25 @@
+// Conceito fundamental em Java: Strings são Imutáveis.
+
+
+
+// Quando você chama um método como .toUpperCase() em uma String, a String original não é alterada.
+
+// O método cria e retorna uma nova String com a alteração aplicada.
+
+// Implicação: Se você não atribui o resultado a uma nova variável (ou à variável original), a alteração é perdida.
+
+
+
+// String nome = "Pedro";
+
+// nome.toUpperCase(); // INCORRETO: O valor de 'nome' continua sendo "Pedro"
+
+// nome = nome.toUpperCase(); // CORRETO: Agora 'nome' é "PEDRO"
+
+-------------------------------------------------------------------------
+
+// Para consolidar o conhecimento sobre as funcionalidades da String e os Métodos de Comparação, precisamos entender por que String é uma exceção e como comparar seu conteúdo de forma segura.
+
+// Se você tem a String String s = "curso"; e executa s.toUpperCase();, qual é o valor de s após essa execução?
+
+// O valor de s continua sendo "curso", pois o método toUpperCase() retorna uma nova String e não altera a String original (Imutabilidade).

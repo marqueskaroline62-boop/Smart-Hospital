@@ -1,0 +1,20 @@
+//1
+// Entrada (I): amostras/tempo/amostrasValidas
+// Processamento (P): double tempo medio: amostras/tempo e double percentualValidas: amostrasValidas/amostras
+// Saída (O): tempo medio: e amostrasValidas:
+// Teste 1 (entrada → saída esperada):
+// entrada: 10 amostras, tempo 100 minutos, e amostrasValidas 5
+// saída esperada: tempo medio: 10.00 e percentualValidas 50.00%
+// Teste 2 (entrada → saída esperada):
+// entrada: 20 amostras, tempo 250 minutos e amostrasValidas 18
+// saída esperada: tempo medio: 12.50 e percentualValidas 90.00%
+
+//2
+// Facilidade de depurar (encontrar erro)
+// 👉 B — pois permite verificar o valor intermediário (razao) separadamente.
+// Clareza para outra pessoa ler
+// 👉 B — porque separa o cálculo em etapas, facilitando o entendimento.
+// Risco de erro silencioso
+// 👉 B — pois torna mais visível cada etapa do cálculo, reduzindo confusões.
+// Facilidade de testar com evidência
+// 👉 B — já que é possível testar a razão antes de converter para percentual.

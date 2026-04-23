@@ -1,0 +1,8 @@
+// Se eu precisar de calcular a média de 50 alunos em três partes diferentes do meu programa atual, como eu faria isso hoje?
+// resposta: Provavelmente copiaria e colaria o mesmo código três vezes. (Se pensou nisso, você sentirá o benefício imediato da modularização).
+
+// Qual é a diferença prática entre uma variável que armazena um número inteiro (int) e uma que armazena texto (String)?
+// resposta: O int permite operações matemáticas, enquanto a String armazena caracteres. (Isso será crucial para definir o que entra e o que sai dos seus métodos).
+
+// O que acontece com o fluxo de execução do Java quando ele encontra um if cuja condição é falsa?
+// resposta: Ele ignora o bloco de código associado e passa para a próxima instrução ou para o else. (Entender o fluxo é a chave para compreender o "pulo" entre métodos).

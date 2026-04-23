@@ -1,0 +1,48 @@
+// O que acontece com a execução de um método quando o comando return é atingido?
+// R: O método é encerrado imediatamente e o controlo (junto com o valor) volta para quem o chamou. Qualquer código abaixo do return é ignorado.
+
+// Posso usar o comando return dentro de um método que foi declarado como void?
+// R: Sim, mas apenas para encerrar o método precocemente (escrevendo apenas return;). Não pode devolver nenhum valor, pois a promessa foi de um retorno vazio.
+
+// Qual a principal diferença na forma como chamamos um método void e um método com retorno no main?
+// R:O método void é chamado como uma instrução isolada. O método com retorno é geralmente chamado como parte de uma atribuição ou expressão (ex: variavel = metodo();).
+
+// Por que o compilador dá erro se um if dentro de uma função tem return, mas o else não tem?
+// R: Porque o Java exige que todos os caminhos possíveis devolvam um valor. O compilador não aceita o risco de o método terminar sem entregar o que prometeu.
+
+// Verificação de Aprendizagem
+// Desafio de Código Mental
+
+// Analise o trecho de código abaixo. Existe um erro conceitual/técnico nele. Consegue identificar qual é?
+
+// public static int somarPontos(int atual, int bonus) {
+//     int total = atual + bonus;
+//     System.out.println("Pontos calculados!");
+//     return total;
+//     System.out.println("Operação finalizada com sucesso.");
+// }
+
+// Feedback Detalhado da Verificação
+// No desafio anterior, o erro reside na tentativa de executar uma ação após o método já ter sido encerrado. Vamos dissecar o porquê de o Java ser tão rigoroso com a linha System.out.println("Operação finalizada com sucesso.");:
+
+// A Barreira do return
+
+// Imagine que o return é a porta de saída de uma sala. Uma vez que o processamento passa por essa porta e entrega o valor total ao programa principal, a sala (o escopo do método) é "desativada". O Java, por questões de eficiência e segurança, não permite que existam instruções órfãs que nunca serão lidas. Para o compilador, escrever código após um return é como dar instruções a alguém que já saiu do prédio: é um desperdício de memória e um erro de lógica.
+
+// O Fluxo de Execução
+
+// O computador lê o código de cima para baixo:
+
+// 1. Ele calcula a soma.
+
+// 2. Ele imprime "Pontos calculados!".
+
+// 3. Ele encontra o return e salta imediatamente de volta para onde o método foi chamado no main.
+
+// 4. A última linha de impressão é completamente ignorada pelo fluxo de execução.
+
+// A Solução Correta
+
+// Se você precisa que aquela mensagem apareça, ela deve ser movida para antes do return. O return deve ser sempre o "último ato" do seu método dentro daquele caminho lógico.
+
+// Dica: Muitos programadores iniciantes cometem esse erro ao tentar fazer "limpezas" ou logs de encerramento. Lembre-se: se o dado saiu da caixa, a caixa fechou. Se algo precisa ser feito, faça-o enquanto a porta ainda está aberta.

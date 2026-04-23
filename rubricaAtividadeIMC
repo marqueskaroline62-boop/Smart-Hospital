@@ -1,0 +1,16 @@
+Pseudocódigo (Abstração)	            Código Java (Implementação)
+VAR	                                    import java.util.Scanner;
+Peso: REAL	                            public static void main(String[] args) {
+Altura: REAL	                        Scanner leitor = new Scanner(System.in);
+IMC: REAL	                            double peso;
+FIM_VAR	                                double altura;
+EscrevaLinha("Digite seu peso (kg):")	double imc;
+Leia(Peso)	                            System.out.println("Digite seu peso (kg):");
+EscrevaLinha("Digite sua altura (m):")	peso = leitor.nextDouble();
+Leia(Altura)	                        System.out.println("Digite sua altura (m):");
+IMC <- Peso / (Altura * Altura)	        altura = leitor.nextDouble();
+Escreva("Seu IMC é: ")	                // Cálculo: IMC = Peso / Altura ao quadrado
+Escreval(IMC)	                        imc = peso / (altura * altura);
+FIM_ALGORITMO	                        System.out.print("Seu IMC é: ");
+                                        System.out.println(imc);
+                                        }

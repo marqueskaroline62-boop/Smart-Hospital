@@ -1,0 +1,16 @@
+// Analise a assinatura abaixo e responda:
+
+// public static void atualizarProntuario(int idPaciente, String diagnostico, boolean urgente)
+
+// Pergunta: Qual das chamadas abaixo está correta e por quê?
+
+// 1. atualizarProntuario("Gripe", 502, true);
+// 2. atualizarProntuario(502, "Gripe");
+// 3. atualizarProntuario(502, "Gripe", false);
+
+// resposta: A alternativa correta é a 3, pois respeita tanto a quantidade, quanto a ordem e os tipos dos parâmetros definidos na assinatura do método.
+
+// Feedback
+// Porque a precisão técnica é vital?
+// resposta: Porque a precisão técnica garante que o programa funcione corretamente, respeitando a sintaxe e a lógica esperadas, 
+// evitando erros como passagem incorreta de parâmetros, falhas de execução e comportamentos inesperados.

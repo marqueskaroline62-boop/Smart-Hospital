@@ -1,0 +1,23 @@
+// Qual é a principal vantagem de usar métodos em vez de repetir o código várias vezes?
+// resposta: Manutenibilidade. Se a regra mudar, você altera em um só lugar (dentro do método) e todos os pontos que o chamam são atualizados.
+
+// Por que precisamos usar a palavra-chave static nos métodos que criamos para serem chamados pelo main?
+// resposta: Porque o main é um método estático. Em Java, um método estático só pode chamar diretamente outros métodos que também sejam estáticos dentro da mesma classe.
+
+// Onde, fisicamente, um novo método deve ser escrito no arquivo .java?
+// Dentro das chaves da class, mas fora das chaves de qualquer outro método (como o main).
+
+// O que o tipo de retorno void indica sobre um método?
+// resposta: Indica que o método realiza uma tarefa (como imprimir algo), mas não devolve nenhum valor ou dado para quem o chamou.
+
+// Qual a diferença conceitual entre Parâmetro e Argumento?
+// resposta: O Parâmetro é a variável no molde (na declaração do método). O Argumento é o valor real enviado durante a chamada.
+
+// O que acontece se eu enviar um int para um método que espera uma String?
+// resposta: Ocorre um Erro de Compilação. O Java é uma linguagem fortemente tipada e exige que o contrato de tipos seja respeitado.
+
+// É possível um método receber 5 parâmetros de tipos diferentes?
+// responder: Sim. Não há um limite rígido, desde que você os separe por vírgula e respeite a ordem na hora de chamar.
+
+// Uma variável declarada como parâmetro pode ser usada dentro do método main?
+// resposta: Não. Ela possui "escopo local", existindo apenas enquanto o método ao qual ela pertence está sendo executado.

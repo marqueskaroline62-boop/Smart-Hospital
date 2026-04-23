@@ -1,0 +1,11 @@
+O que acontece a uma variável local quando o método onde ela foi criada chega ao fim (fecha a chave })?
+R: Ela é destruída e removida da memória. O seu valor deixa de existir e o espaço é libertado para o sistema.
+
+Se eu declarar uma variável static fora dos métodos (nível da classe), quem pode aceder a ela?
+R: Todos os métodos dentro dessa mesma classe podem ler ou alterar o seu valor.
+
+É possível usar uma variável que foi criada dentro de um bloco if fora desse mesmo if?
+R: Não. O escopo é limitado pelas chaves { }. Se a variável nasceu dentro do if, ela morre assim que o bloco do if termina.
+
+O que é o Shadowing (Sombreamento)?
+R: É quando uma variável local tem o mesmo nome que uma variável de classe. O Java dará prioridade à variável local enquanto o código estiver dentro daquele método.

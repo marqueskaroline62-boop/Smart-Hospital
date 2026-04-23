@@ -1,0 +1,15 @@
+Off-by-one: o erro mais comum com for
+
+Um erro clássico acontece quando você repete uma vez a mais ou uma vez a menos. Isso ocorre por confusão entre:
+
+i < n (repete n-1 vezes se começar em 1, ou n vezes se começar em 0).
+i <= n (repete n vezes se começar em 1, ou n+1 vezes se começar em 0).
+Um jeito prático de evitar isso é escolher um padrão e manter consistência:
+
+Padrão A: começar em 1 e ir até <= n.
+Padrão B: começar em 0 e ir até < n.
+Os dois são válidos, mas misturar eles é onde o erro aparece.
+
+Padrão	       Exemplo	            Quantas vezes repete
+Começa em 1	   i = 1; i <= n; i++	n
+Começa em 0	   i = 0; i < n; i++	n

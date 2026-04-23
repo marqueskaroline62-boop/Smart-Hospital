@@ -1,0 +1,9 @@
+O que é ipo (entrada → processamento → saída)?
+São 3 etapas de um programa. A entrada recebe os dados do usuário, o processamento realiza os cálculos com esses dados e a saída mostra o resultado. Exemplo: no laboratório, a entrada 
+foi o número de amostras, o tempo total, e as amostras válidas. O processamento calculou a média de tempo e o percentual de amostras válidas. A saída exibiu o resultado na tela.
+
+Por que double é necessário para percentual e média?
+É necessário para evitar perda de precisão, quando usamos int divisão inteira, o resultado perde as casas decimais. Exemplo: 7 / 2 = 3 (errado para média), mas com double: 7 / 2 = 3.5 (correto).
+O que significa “evidência” em um programa sequencial?
+Evidência é a comprovação de que o programa funciona corretamente, usando testes com resultados esperados. Exemplo: Se amostras = 20, tempo = 250 minutos, amostras válidas = 18. Então a média
+ de tempo é 12.50 e percentual válidas é 90%. Se o programa mostrar isso, há evidência de que está correto.

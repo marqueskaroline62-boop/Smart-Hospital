@@ -1,0 +1,9 @@
+// Imagine o campo de senha em um sistema... 
+
+// O que acontece se o sistema não usar o .trim() ou se for case-sensitive (diferencia maiúsculas de minúsculas)?
+// Se o usuário digitar senha123 (com um espaço no final) e o sistema não usar .trim(), o que o sistema armazenará no banco de dados?
+// Se o sistema não usar .toLowerCase() ou .toUpperCase() em um email de login, quais problemas de acesso isso pode gerar?
+
+
+// Responda mentalmente: Qual é a diferença crucial entre a forma como o int armazena o valor e a forma como a String armazena o valor? A diferença crucial é o tipo de dado 
+// e como o valor é representado na memória:int é tipo primitivo e String é objeto (classe)
